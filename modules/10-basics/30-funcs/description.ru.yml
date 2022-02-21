@@ -76,6 +76,28 @@ theory: |
   }
   ```
 
+  Функции в Go можно передавать как аргумент в другую функцию:
+
+  ```go
+  import "fmt"
+
+  func main() {
+  	executor(func() {
+  		fmt.Println("Hello world!")
+  	})
+  }
+
+  func executor(fn func()) {
+  	fn()
+  }
+  ```
+
+  Вывод программы:
+
+  ```
+  Hello world!
+  ```
+
 instructions: |
   В Go есть стандартная библиотека `strconv` для конвертации чисел в строки и наоборот. Пример использования:
 

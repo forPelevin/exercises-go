@@ -15,6 +15,7 @@ theory: |
   func main() {
   	p := Person{Name: "John", Age: 25}
 
+    // Обращение к полю структуры осуществляется через точку
   	p.Name // "John"
   	p.Age // 25
   }
